@@ -14,7 +14,7 @@ Bu proje, Entity Framework **Database First** yaklaşımını öğrenmek amacıy
   - ➕ Ekleme
   - 📝 Güncelleme
   - ❌ Silme
-- ✅ ASP.NET MVC veya ASP.NET Web Forms üzerinden arayüz (kendi tercihin)
+- ✅ ASP.NET MVC üzerinden arayüz 
 
 ---
 
