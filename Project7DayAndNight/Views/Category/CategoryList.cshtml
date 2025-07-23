@@ -1,0 +1,37 @@
+﻿@model List<Project7DayAndNight.Models.DataModels.Category>
+
+@{
+    ViewBag.Title = "CategoryList";
+    Layout= null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+
+<div class="container mt-3">
+    <h2>Kategori Listesi</h2>
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Kaytegori Adı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+
+                <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
+                <td>
+                    <a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-warning">Güncelle</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Category/CreateCategory" class="btn btn-primary">Kategori Ekle</a>
+</div>

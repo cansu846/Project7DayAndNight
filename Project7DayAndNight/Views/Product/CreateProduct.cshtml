@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "CreateProduct";
+    Layout = null;
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+
+<div class="container mt-3">
+    <h2>Urun Ekleme Sayfası</h2>
+
+    <form method="post">
+        <label>Urun adı</label>
+        <input type="text" class="form-control" name="ProductName" />
+        <br />
+        <label>Urun Fiyatı</label>
+        <input type="text" class="form-control" name="ProductPrice" />
+        <br />
+        <label>Urun Stogu</label>
+        <input type="text" class="form-control" name="ProductStock" />
+        <br />
+        <button class="btn btn-primary">Urun Ekle</button>
+    </form>
+</div>

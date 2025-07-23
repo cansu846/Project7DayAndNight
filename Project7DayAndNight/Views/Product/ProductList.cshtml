@@ -1,0 +1,46 @@
+﻿@model List<Project7DayAndNight.Models.DataModels.Product>
+@{
+    ViewBag.Title = "ProductList";
+    Layout= null;
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+
+<div class="container mt-3">
+    <h2>Urun Listesi</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ürün Adı</th>
+            <th>Stok</th>
+            <th>Fiyat</th>
+            <th>Durum</th>
+            <th>Kategori Adı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.ProductName</td>
+                <td>@item.ProductStock</td>
+                <td>@item.ProductPrice</td>
+                <td>@item.ProductStatus</td>
+                <td>@item.Category.CategoryName</td>
+                <td><a href="/Product/DeleteProduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
+                <td>
+                    <a href="/Product/UpdateProduct/@item.ProductId" class="btn btn-warning">Güncelle</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Product/CreateProduct" class="btn btn-success">Urun Ekle</a>
+</div>
